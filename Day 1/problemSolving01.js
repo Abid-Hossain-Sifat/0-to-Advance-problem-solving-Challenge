@@ -2,7 +2,7 @@
 
 const num = 7;
 
-if (num / 2 == 0){
+if (num % 2 == 0){
     console.log ("The Number is Even")
 } else {
     console.log ("The Number is Odd")
@@ -50,4 +50,48 @@ if (temperature >= 30){
 }
 
 
-Problem 5:
+// Problem 5: check the number is Prime or Not. number is (13)
+
+
+const number = 13;
+let isPrime = true;
+
+if (number <= 1){
+    isPrime = false;
+} else {
+    for (let i = 2; i < number; i++){
+        if (number % i === 0){
+            isPrime = false;
+            break;
+        }
+    }
+}
+
+if (isPrime){
+    console.log ("The Number is Prime Number")
+} else {
+    console.log ("The Number is not a Prime Number")
+}
+
+
+// Bonus Problem : find Prime up to 50 
+
+for (let num = 1; num <= 50; num++){
+    let isPrime = true;
+
+
+    if (num <= 1){
+        isPrime = false;
+    } else {
+        for (let i = 2; i < num; i++){
+            if (num % i === 0) {
+                isPrime = false;
+                break;
+            }
+        }
+    }
+
+    if (isPrime){
+        console.log ("Prime Number is", num)
+    }
+}
